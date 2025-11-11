@@ -1,0 +1,72 @@
+<header class="site-header">
+    <div class="container">
+        <span class="brand">SRINIVAS HUNDEWAR</span>
+
+        <nav class="nav" role="tablist" aria-label="Site sections">
+            <button role="tab" [attr.aria-selected]="active() === 'home'" [class.active]="active() === 'home'"
+                (click)="setTab('home')">Home</button>
+            <button role="tab" [attr.aria-selected]="active() === 'posts'" [class.active]="active() === 'posts'"
+                (click)="setTab('posts')">Posts</button>
+            <button role="tab" [attr.aria-selected]="active() === 'skill'" [class.active]="active() === 'skill'"
+                (click)="setTab('skill')">Skill Set</button>
+            <button role="tab" [attr.aria-selected]="active() === 'resume'" [class.active]="active() === 'resume'"
+                (click)="setTab('resume')">Resume</button>
+            <button role="tab" [attr.aria-selected]="active() === 'uses'" [class.active]="active() === 'uses'"
+                (click)="setTab('uses')">Uses</button>
+        </nav>
+    </div>
+</header>
+
+<main class="page">
+    @switch (active()) {
+    @case ('home') {
+    <section>
+
+        <section class="hero">
+            <div class="hero-container">
+                <div class="hero-image">
+                    <img src="assets/profileZ.jpeg" alt="Srinivas Hundewar">
+                </div>
+
+                <div class="hero-content">
+                    <h1>Hey, I'm <span class="highlight">Srinivas Hundewar</span> and I love building things.</h1>
+                    <p class="subtitle">
+                        I’m a web application developer based in Florida.
+                        I enjoy working with Angular, exploring new tech, and creating meaningful projects.
+                    </p>
+
+                    <div class="social-icons">
+                        <a href="#" aria-label="Cloud"><i class="fa-solid fa-cloud"></i></a>
+                        <a href="#" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </section>
+    }
+    @case ('posts') {
+    <section>
+        <h1>Posts</h1>
+    </section>
+    }
+    @case ('skill') {
+    <section>
+        <h1>Skill Set</h1>
+    </section>
+    }
+    @case ('resume') {
+    <section>
+        <h1>Resume</h1>
+    </section>
+    }
+    @case ('uses') {
+    <section>
+        <h1>Uses</h1>
+    </section>
+    }
+    }
+</main>
