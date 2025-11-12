@@ -1,10 +1,12 @@
-import { Component, signal } from '@angular/core';
+import { Component, signal, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
 @Component({
     selector: 'my-new',
     standalone: true,
     templateUrl: './my-new.component.html',
-    styleUrls: ['./my-new.component.scss']
+    styleUrls: ['./my-new.component.scss'],
+    schemas: [CUSTOM_ELEMENTS_SCHEMA]   // 👈 lets Angular render <iconify-icon>
+
 })
 export class MyNewComponent {
     active = signal<'home' | 'posts' | 'skill' | 'resume' | 'uses'>('home');

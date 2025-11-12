@@ -31,8 +31,8 @@
                 <div class="hero-content">
                     <h1>Hey, I'm <span class="highlight">Srinivas Hundewar</span> and I love building things.</h1>
                     <p class="subtitle">
-                        I’m a web application developer based in Florida.
-                        I enjoy working with Angular, exploring new tech, and creating meaningful projects.
+                        I’m a Front-End Developer based in Florida, passionate about building user-friendly applications
+                        with Angular, exploring new technologies, and creating meaningful digital experiences.
                     </p>
 
                     <div class="social-icons">
@@ -46,6 +46,47 @@
             </div>
         </section>
 
+        <!-- I Like To Code Section -->
+        <section class="code-section">
+            <h2 class="code-title">I Like To Code</h2>
+            <div class="code-container">
+                <div class="code-card">
+                    <i class="fa-solid fa-code code-icon"></i>
+                    <h3>Tech Stack</h3>
+                    <p>
+                        I've been developing web applications since 2014 and I've had a pretty broad tech stack.
+                        I currently primarily focus on Angular and occasionally dabble in C#.
+                    </p>
+                    <a (click)="setTab('skill')" class="code-link">Resume Skill Set</a>
+                </div>
+
+                <div class="code-card">
+                    <i class="fa-solid fa-rss code-icon"></i>
+                    <h3>Tech and Geek Blog</h3>
+                    <p>
+                        I've enjoyed blogging since 2003. I've dug up some of my old posts and converted them to this
+                        format.
+                        Enjoy my college cringe posts.
+                    </p>
+                    <p>
+                        Right now, I'm mainly blogging about tech, wood working, and video game stuff.
+                    </p>
+                    <a href="#" class="code-link">Blog</a>
+                </div>
+
+                <div class="code-card">
+                    <i class="fa-solid fa-play code-icon"></i>
+                    <h3>YouTube Tutorials</h3>
+                    <p>
+                        I've done a couple of YouTube series on several topics. These are pretty out of date now,
+                        but I'm proud of what I was able to do with what little time I have.
+                    </p>
+                    <a href="#" class="code-link">YouTube Channel</a>
+                </div>
+            </div>
+        </section>
+
+
     </section>
     }
     @case ('posts') {
@@ -55,7 +96,293 @@
     }
     @case ('skill') {
     <section>
-        <h1>Skill Set</h1>
+        <!-- <h1>Skill Set</h1> -->
+
+        <section class="skills">
+            <h2 class="skills__title">Active</h2>
+            <p class="skills__subtitle">Current tech actively being used professionally or in side projects.</p>
+
+            <div class="skills__grid">
+                <!-- JS/TS -->
+                <article class="skill-card">
+                    <header class="skill-card__header">
+                        <div class="skill-card__icon" aria-hidden="true">
+                            <i class="devicon-javascript-plain colored"></i>
+                        </div>
+                        <div>
+                            <h3 class="skill-card__name">JS/TS</h3>
+                            <div class="skill-card__years">2007 – Present</div>
+                            <div class="skill-card__tags">Performance Optimization, D3</div>
+                        </div>
+                    </header>
+                    <div class="skill-card__bars">
+                        <div class="bar bar--exp" style="--pct:92%"></div>
+                        <div class="bar bar--love" style="--pct:100%"></div>
+                    </div>
+                </article>
+
+                <!-- HTML -->
+                <article class="skill-card">
+                    <header class="skill-card__header">
+                        <div class="skill-card__icon" aria-hidden="true">
+                            <i class="devicon-html5-plain colored"></i>
+                        </div>
+                        <div>
+                            <h3 class="skill-card__name">HTML</h3>
+                            <div class="skill-card__years">2007 – Present</div>
+                            <div class="skill-card__tags">HTML5, Accessibility, Figma → HTML</div>
+                        </div>
+                    </header>
+                    <div class="skill-card__bars">
+                        <div class="bar bar--exp" style="--pct:90%"></div>
+                        <div class="bar bar--love" style="--pct:85%"></div>
+                    </div>
+                </article>
+
+                <!-- CSS -->
+                <article class="skill-card">
+                    <header class="skill-card__header">
+                        <div class="skill-card__icon" aria-hidden="true">
+                            <i class="devicon-css3-plain colored"></i>
+                        </div>
+                        <div>
+                            <h3 class="skill-card__name">CSS</h3>
+                            <div class="skill-card__years">2007 – Present</div>
+                            <div class="skill-card__tags">CSS3, SCSS, LESS</div>
+                        </div>
+                    </header>
+                    <div class="skill-card__bars">
+                        <div class="bar bar--exp" style="--pct:95%"></div>
+                        <div class="bar bar--love" style="--pct:80%"></div>
+                    </div>
+                </article>
+
+                <!-- Angular -->
+                <article class="skill-card">
+                    <header class="skill-card__header">
+                        <div class="skill-card__icon" aria-hidden="true">
+                            <iconify-icon icon="logos:angular-icon" width="28" height="28"></iconify-icon>
+                        </div>
+                        <div>
+                            <h3 class="skill-card__name">Angular</h3>
+                            <div class="skill-card__years">2017 – Present</div>
+                            <div class="skill-card__tags">RxJS, Material, NgRx</div>
+                        </div>
+                    </header>
+                    <div class="skill-card__bars">
+                        <div class="bar bar--exp" style="--pct:80%"></div>
+                        <div class="bar bar--love" style="--pct:95%"></div>
+                    </div>
+                </article>
+
+                <!-- React -->
+                <article class="skill-card">
+                    <header class="skill-card__header">
+                        <div class="skill-card__icon" aria-hidden="true">
+                            <i class="devicon-react-original colored"></i>
+                        </div>
+                        <div>
+                            <h3 class="skill-card__name">React</h3>
+                            <div class="skill-card__years">2020 – Present</div>
+                            <div class="skill-card__tags">MUI, React Query, Styled Components</div>
+                        </div>
+                    </header>
+                    <div class="skill-card__bars">
+                        <div class="bar bar--exp" style="--pct:45%"></div>
+                        <div class="bar bar--love" style="--pct:60%"></div>
+                    </div>
+                </article>
+
+                <!-- Vue.js -->
+                <article class="skill-card">
+                    <header class="skill-card__header">
+                        <div class="skill-card__icon" aria-hidden="true">
+                            <i class="devicon-vuejs-plain colored"></i>
+                        </div>
+                        <div>
+                            <h3 class="skill-card__name">Vue.js</h3>
+                            <div class="skill-card__years">2017, 2022 – Present</div>
+                            <div class="skill-card__tags">Vue 2, Vue 3, Vuetify</div>
+                        </div>
+                    </header>
+                    <div class="skill-card__bars">
+                        <div class="bar bar--exp" style="--pct:65%"></div>
+                        <div class="bar bar--love" style="--pct:70%"></div>
+                    </div>
+                </article>
+
+                <!-- CI/CD - DevOps (choose one brand to represent) -->
+                <article class="skill-card">
+                    <header class="skill-card__header">
+                        <div class="skill-card__icon" aria-hidden="true">
+                            <i class="devicon-githubactions-plain colored"></i>
+                        </div>
+                        <div>
+                            <h3 class="skill-card__name">CI/CD · DevOps</h3>
+                            <div class="skill-card__years">2020 – Present</div>
+                            <div class="skill-card__tags">GitHub Actions, Cloud Build, Azure Pipelines</div>
+                        </div>
+                    </header>
+                    <div class="skill-card__bars">
+                        <div class="bar bar--exp" style="--pct:50%"></div>
+                        <div class="bar bar--love" style="--pct:75%"></div>
+                    </div>
+                </article>
+
+                <!-- Azure -->
+                <article class="skill-card">
+                    <header class="skill-card__header">
+                        <div class="skill-card__icon" aria-hidden="true">
+                            <i class="devicon-azure-plain colored"></i>
+                        </div>
+                        <div>
+                            <h3 class="skill-card__name">Azure</h3>
+                            <div class="skill-card__years">2022 – Present</div>
+                            <div class="skill-card__tags">Azure DevOps, Azure Pipelines</div>
+                        </div>
+                    </header>
+                    <div class="skill-card__bars">
+                        <div class="bar bar--exp" style="--pct:55%"></div>
+                        <div class="bar bar--love" style="--pct:70%"></div>
+                    </div>
+                </article>
+
+                <!-- GCP -->
+                <article class="skill-card">
+                    <header class="skill-card__header">
+                        <div class="skill-card__icon" aria-hidden="true">
+                            <i class="devicon-googlecloud-plain colored"></i>
+                        </div>
+                        <div>
+                            <h3 class="skill-card__name">GCP</h3>
+                            <div class="skill-card__years">2022 – Present</div>
+                            <div class="skill-card__tags">Cloud Run, Cloud Build, Firebase</div>
+                        </div>
+                    </header>
+                    <div class="skill-card__bars">
+                        <div class="bar bar--exp" style="--pct:60%"></div>
+                        <div class="bar bar--love" style="--pct:85%"></div>
+                    </div>
+                </article>
+
+                <!-- Code Testing -->
+                <article class="skill-card">
+                    <header class="skill-card__header">
+                        <div class="skill-card__icon" aria-hidden="true">
+                            <i class="devicon-jest-plain colored"></i>
+                        </div>
+                        <div>
+                            <h3 class="skill-card__name">Code Testing</h3>
+                            <div class="skill-card__years">2020 – Present</div>
+                            <div class="skill-card__tags">Jest, Cypress, Vitest</div>
+                        </div>
+                    </header>
+                    <div class="skill-card__bars">
+                        <div class="bar bar--exp" style="--pct:65%"></div>
+                        <div class="bar bar--love" style="--pct:90%"></div>
+                    </div>
+                </article>
+
+                <!-- Node.js -->
+                <article class="skill-card">
+                    <header class="skill-card__header">
+                        <div class="skill-card__icon" aria-hidden="true">
+                            <i class="devicon-nodejs-plain colored"></i>
+                        </div>
+                        <div>
+                            <h3 class="skill-card__name">Node.js</h3>
+                            <div class="skill-card__years">2022 – Present</div>
+                            <div class="skill-card__tags">Express, Generic Tasks</div>
+                        </div>
+                    </header>
+                    <div class="skill-card__bars">
+                        <div class="bar bar--exp" style="--pct:55%"></div>
+                        <div class="bar bar--love" style="--pct:95%"></div>
+                    </div>
+                </article>
+
+                <!-- Docker -->
+                <article class="skill-card">
+                    <header class="skill-card__header">
+                        <div class="skill-card__icon" aria-hidden="true">
+                            <i class="devicon-docker-plain colored"></i>
+                        </div>
+                        <div>
+                            <h3 class="skill-card__name">Docker</h3>
+                            <div class="skill-card__years">2020 – Present</div>
+                            <div class="skill-card__tags">Compose</div>
+                        </div>
+                    </header>
+                    <div class="skill-card__bars">
+                        <div class="bar bar--exp" style="--pct:60%"></div>
+                        <div class="bar bar--love" style="--pct:85%"></div>
+                    </div>
+                </article>
+
+                <!-- Java -->
+                <article class="skill-card">
+                    <header class="skill-card__header">
+                        <div class="skill-card__icon" aria-hidden="true">
+                            <iconify-icon icon="logos:java" width="28" height="28"></iconify-icon>
+                        </div>
+                        <div>
+                            <h3 class="skill-card__name">Java</h3>
+                            <div class="skill-card__years">2015 – Present</div>
+                            <div class="skill-card__tags">OOP · Collections · Streams · Multithreading</div>
+                        </div>
+                    </header>
+                    <div class="skill-card__bars">
+                        <div class="bar bar--exp" style="--pct:85%"></div>
+                        <div class="bar bar--love" style="--pct:80%"></div>
+                    </div>
+                </article>
+
+                <!-- Spring -->
+                <article class="skill-card">
+                    <header class="skill-card__header">
+                        <div class="skill-card__icon" aria-hidden="true">
+                            <iconify-icon icon="logos:spring" width="28" height="28"></iconify-icon>
+                        </div>
+                        <div>
+                            <h3 class="skill-card__name">Spring Framework</h3>
+                            <div class="skill-card__years">2017 – Present</div>
+                            <div class="skill-card__tags">Dependency Injection · MVC · Data JPA</div>
+                        </div>
+                    </header>
+                    <div class="skill-card__bars">
+                        <div class="bar bar--exp" style="--pct:75%"></div>
+                        <div class="bar bar--love" style="--pct:90%"></div>
+                    </div>
+                </article>
+
+                <!-- Spring Boot -->
+                <article class="skill-card">
+                    <header class="skill-card__header">
+                        <!-- <div class="skill-card__icon" aria-hidden="true">
+                            <iconify-icon icon="logos:spring-boot" width="28" height="28"></iconify-icon>
+                        </div> -->
+                        <!-- Spring Boot icon -->
+                        <div class="skill-card__icon" aria-hidden="true">
+                            <iconify-icon icon="simple-icons:springboot" width="26" height="26"
+                                style="color:#6DB33F"></iconify-icon>
+                        </div>
+
+                        <div>
+                            <h3 class="skill-card__name">Spring Boot</h3>
+                            <div class="skill-card__years">2018 – Present</div>
+                            <div class="skill-card__tags">REST APIs · Microservices · Actuator · Security</div>
+                        </div>
+                    </header>
+                    <div class="skill-card__bars">
+                        <div class="bar bar--exp" style="--pct:78%"></div>
+                        <div class="bar bar--love" style="--pct:92%"></div>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+
     </section>
     }
     @case ('resume') {
