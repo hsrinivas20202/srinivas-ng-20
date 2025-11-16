@@ -312,19 +312,22 @@
 }
 
 /* Bars */
-.skill-card__bars {
-    display: grid;
-    gap: .45rem;
-}
+// .skill-card__bars {
+//     display: grid;
+//     gap: .45rem;
+// }
 
 .bar {
     position: relative;
     height: 12px;
+    /* was: overflow: hidden; */
+    overflow: visible;
+    /* ✅ allow tooltip to escape the bar */
     background: #eef2f7;
     border: 1px solid #d6e0ec;
     border-radius: 999px;
-    overflow: hidden;
 }
+
 
 .bar::after {
     content: "";
@@ -347,4 +350,98 @@
 /* Ensure component block formatting */
 :host {
     display: block;
+}
+
+
+/* stack the two rows (competency + interest) */
+.skill-card__bars {
+    display: grid;
+    gap: 0.55rem;
+}
+
+/* put icon + bar on one line */
+.meter {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* icon size + hover */
+.meter__icon {
+    width: 20px;
+    text-align: center;
+    font-size: 14px;
+    line-height: 1;
+    opacity: 0.9;
+    transition: transform .15s ease, opacity .15s ease;
+}
+
+.meter__icon:hover {
+    transform: scale(1.12);
+    opacity: 1;
+}
+
+/* let the bar fill the rest of the row */
+.meter .bar {
+    flex: 1;
+    margin: 0;
+}
+
+/* optional: theme colors for icons */
+.meter .fa-code {
+    color: #0a2a66;
+}
+
+/* Competency */
+.meter .fa-heart {
+    color: #0f766e;
+}
+
+/* Interest */
+
+
+
+.bar {
+    position: relative;
+    overflow: visible;
+    /* ensure tooltip can show outside the pill */
+}
+
+/* Custom tooltip when data-tooltip is present */
+.bar[data-tooltip]:hover::before {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 140%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #0a2a66;
+    color: #fff;
+    font-size: 0.75rem;
+    padding: 6px 10px;
+    border-radius: 6px;
+    white-space: nowrap;
+    z-index: 10;
+}
+
+/* Green tooltip for Interest bars */
+.bar--love[data-tooltip]:hover::before {
+    background: #0f766e !important;
+    /* green */
+    color: #fff;
+}
+
+/* Green arrow (optional, if you add arrow later) */
+.bar--love[data-tooltip]:hover::after {
+    border-top-color: #0f766e !important;
+}
+
+.skill-section-header {
+    grid-column: 1 / -1;
+    /* full width */
+    font-weight: 800;
+    font-size: 1.1rem;
+    color: #0a2a66;
+    padding: 0.5rem 0;
+    margin-top: 1rem;
+    border-bottom: 2px solid #d8e2ff;
 }

@@ -10,5 +10,20 @@ import { Component, signal, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 })
 export class MyNewComponent {
     active = signal<'home' | 'posts' | 'skill' | 'resume' | 'uses'>('home');
-    setTab(tab: 'home' | 'posts' | 'skill' | 'resume' | 'uses') { this.active.set(tab); }
+    setTab(tab: 'home' | 'posts' | 'skill' | 'resume' | 'uses') {
+
+        this.active.set(tab);
+
+        window.scrollTo(0, 0);
+
+        // scroll to top smoothly
+        // setTimeout(() => {
+        //     window.scrollTo({
+        //         top: 0,
+        //         left: 0,
+        //         behavior: 'smooth'
+        //     });
+        // }, 0);
+    }
+
 }
