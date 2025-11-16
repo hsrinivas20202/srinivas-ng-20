@@ -603,7 +603,27 @@
     }
     @case ('resume') {
     <section>
-        <h1>Resume</h1>
+        <!-- <h1>Resume</h1> -->
+        <h2 class="section-title">Resume</h2>
+
+        <div class="resume-actions">
+            <!-- Open in new tab / download -->
+            <a href="assets/resume/SrinivasHundeResume.pdf" target="_blank" rel="noopener" class="btn btn-primary">
+                View / Download Resume (PDF)
+            </a>
+        </div>
+
+        <div class="resume-viewer">
+            <object data="assets/resume/SrinivasHundeResume.pdf#view=FitH" type="application/pdf" class="resume-object">
+                <p>
+                    Your browser can’t display the embedded PDF.
+                    <a href="assets/resume/SrinivasHundeResume.pdf" target="_blank" rel="noopener">
+                        Click here to open it in a new tab.
+                    </a>
+                </p>
+            </object>
+        </div>
+
     </section>
     }
     @case ('uses') {
