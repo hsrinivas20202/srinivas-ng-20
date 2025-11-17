@@ -5,14 +5,14 @@
         <nav class="nav" role="tablist" aria-label="Site sections">
             <button role="tab" [attr.aria-selected]="active() === 'home'" [class.active]="active() === 'home'"
                 (click)="setTab('home')">Home</button>
-            <button role="tab" [attr.aria-selected]="active() === 'posts'" [class.active]="active() === 'posts'"
-                (click)="setTab('posts')">Posts</button>
+            <!-- <button role="tab" [attr.aria-selected]="active() === 'posts'" [class.active]="active() === 'posts'"
+                (click)="setTab('posts')">Posts</button> -->
             <button role="tab" [attr.aria-selected]="active() === 'skill'" [class.active]="active() === 'skill'"
                 (click)="setTab('skill')">Skill Set</button>
             <button role="tab" [attr.aria-selected]="active() === 'resume'" [class.active]="active() === 'resume'"
                 (click)="setTab('resume')">Resume</button>
-            <button role="tab" [attr.aria-selected]="active() === 'uses'" [class.active]="active() === 'uses'"
-                (click)="setTab('uses')">Uses</button>
+            <!-- <button role="tab" [attr.aria-selected]="active() === 'uses'" [class.active]="active() === 'uses'"
+                (click)="setTab('uses')">Uses</button> -->
         </nav>
     </div>
 </header>
@@ -29,18 +29,22 @@
                 </div>
 
                 <div class="hero-content">
-                    <h1>Hey, I'm <span class="highlight">Srinivas Hundewar</span> and I love building things.</h1>
+                    <h1>Hey, I'm <span class="highlight">Srinivas Hundewar</span> and I build modern, scalable web
+                        applications.</h1>
                     <p class="subtitle">
-                        I’m a Front-End Developer based in Florida, passionate about building user-friendly applications
-                        with Angular, exploring new technologies, and creating meaningful digital experiences.
+                        I’m a Front-End Developer based in Jacksonville, Florida, passionate about creating
+                        user-friendly applications with Angular, building robust backend services using Java and Spring
+                        Boot, and delivering reliable, cloud-ready solutions.
                     </p>
 
                     <div class="social-icons">
-                        <a href="#" aria-label="Cloud"><i class="fa-solid fa-cloud"></i></a>
-                        <a href="#" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
-                        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-                        <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
-                        <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                        <!-- <a href="#" aria-label="Cloud"><i class="fa-solid fa-cloud"></i></a> -->
+                        <a href="https://github.com/hsrinivas20202" aria-label="GitHub" target="_blank"><i
+                                class="fa-brands fa-github"></i></a>
+                        <!-- <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a> -->
+                        <a href="https://www.linkedin.com/in/srinivas-h-a58056328" aria-label="LinkedIn"
+                            target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                        <!-- <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a> -->
                     </div>
                 </div>
             </div>
@@ -54,27 +58,28 @@
                     <i class="fa-solid fa-code code-icon"></i>
                     <h3>Tech Stack</h3>
                     <p>
-                        I've been developing web applications since 2014 and I've had a pretty broad tech stack.
-                        I currently primarily focus on Angular and occasionally dabble in C#.
+                        I've been developing web applications since 2014 with a broad and evolving tech stack. I
+                        currently specialize in Angular for frontend development and Java/Spring Boot for backend APIs,
+                        with hands-on experience deploying and managing applications on AWS.
                     </p>
-                    <a (click)="setTab('skill')" class="code-link">Resume Skill Set</a>
+                    <a (click)="setTab('skill')" class="code-link"> Skill Set</a>
                 </div>
 
                 <div class="code-card">
                     <i class="fa-solid fa-rss code-icon"></i>
-                    <h3>Tech and Geek Blog</h3>
+                    <h3>What I’m Working On</h3>
                     <p>
-                        I've enjoyed blogging since 2003. I've dug up some of my old posts and converted them to this
-                        format.
-                        Enjoy my college cringe posts.
+                        I’m currently building and refining real-world projects using Angular and Java/Spring Boot. I
+                        enjoy improving UI/UX, optimizing API performance, and experimenting with AWS services. I update
+                        this portfolio as I complete new features and projects.
                     </p>
-                    <p>
+                    <!-- <p>
                         Right now, I'm mainly blogging about tech, wood working, and video game stuff.
-                    </p>
-                    <a href="#" class="code-link">Blog</a>
+                    </p> -->
+                    <a (click)="setTab('resume')" class="code-link"> Resume</a>
                 </div>
 
-                <div class="code-card">
+                <!-- <div class="code-card">
                     <i class="fa-solid fa-play code-icon"></i>
                     <h3>YouTube Tutorials</h3>
                     <p>
@@ -82,7 +87,7 @@
                         but I'm proud of what I was able to do with what little time I have.
                     </p>
                     <a href="#" class="code-link">YouTube Channel</a>
-                </div>
+                </div> -->
             </div>
         </section>
 
@@ -349,7 +354,7 @@
                         </div>
                         <div>
                             <h3 class="skill-card__name">AWS</h3>
-                            <div class="skill-card__years">2023 – Present</div>
+                            <div class="skill-card__years">2020 – Present</div>
                             <div class="skill-card__tags">EC2 · S3 · Lambda · CloudWatch</div>
                         </div>
                     </header>
@@ -377,7 +382,7 @@
                         </div>
                         <div>
                             <h3 class="skill-card__name">Azure</h3>
-                            <div class="skill-card__years">2022 – Present</div>
+                            <div class="skill-card__years">2019 – Present</div>
                             <div class="skill-card__tags">Azure DevOps, Azure Pipelines</div>
                         </div>
                     </header>
@@ -405,7 +410,7 @@
                         </div>
                         <div>
                             <h3 class="skill-card__name">GCP</h3>
-                            <div class="skill-card__years">2022 – Present</div>
+                            <div class="skill-card__years">2019 – Present</div>
                             <div class="skill-card__tags">Cloud Run, Cloud Build, Firebase</div>
                         </div>
                     </header>
@@ -462,7 +467,7 @@
                         </div>
                         <div>
                             <h3 class="skill-card__name">Node.js</h3>
-                            <div class="skill-card__years">2022 – Present</div>
+                            <div class="skill-card__years">2019 – Present</div>
                             <div class="skill-card__tags">Express, Generic Tasks</div>
                         </div>
                     </header>
@@ -575,7 +580,7 @@
                         </div>
                         <div>
                             <h3 class="skill-card__name">Vue.js</h3>
-                            <div class="skill-card__years">2017, 2022 – Present</div>
+                            <div class="skill-card__years">2017 – Present</div>
                             <div class="skill-card__tags">Vue 2, Vue 3, Vuetify</div>
                         </div>
                     </header>
@@ -632,4 +637,6 @@
     </section>
     }
     }
+    <!-- <app-footer></app-footer> -->
 </main>
+<app-footer></app-footer>

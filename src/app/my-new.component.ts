@@ -1,11 +1,13 @@
 import { Component, signal, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { FooterComponent } from './footer/footer.component';
 
 @Component({
     selector: 'my-new',
     standalone: true,
     templateUrl: './my-new.component.html',
     styleUrls: ['./my-new.component.scss'],
-    schemas: [CUSTOM_ELEMENTS_SCHEMA]   // 👈 lets Angular render <iconify-icon>
+    schemas: [CUSTOM_ELEMENTS_SCHEMA],   // 👈 lets Angular render <iconify-icon>
+    imports: [FooterComponent],
 
 })
 export class MyNewComponent {
