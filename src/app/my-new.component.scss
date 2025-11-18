@@ -476,3 +476,44 @@
     height: 100%;
     border: none;
 }
+
+/* MOBILE HEADER LAYOUT */
+@media (max-width: 600px) {
+
+    .site-header .container {
+        display: flex;
+        /* override grid */
+        flex-direction: column;
+        /* stack items: brand on top, nav below */
+        align-items: center;
+        text-align: center;
+        gap: 0.5rem;
+    }
+
+    .site-header .brand {
+        width: 100%;
+        text-align: center;
+        /* optional: slightly smaller font if it wraps */
+        /* font-size: 1.1rem; */
+    }
+
+    .site-header .nav {
+        width: 100%;
+        display: flex;
+        flex-wrap: nowrap;
+        /* keep in one row */
+        justify-content: space-around;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    .site-header .nav button {
+        flex: 1 1 0;
+        text-align: center;
+        padding: 0.35rem 0.25rem;
+        white-space: nowrap;
+        /* keep text on one line if possible */
+        font-size: 0.8rem;
+        /* adjust if it feels too big */
+    }
+}
