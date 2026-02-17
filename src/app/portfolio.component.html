@@ -7,3 +7,11 @@
         <li>Project C — Example</li>
     </ul>
 </section>
+
+<h2>Users</h2>
+
+<ul *ngIf="users$ | async as users">
+    <li *ngFor="let u of users">
+        {{ u.name }} — {{ u.email }}
+    </li>
+</ul>

@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { User, UserService } from './user.service';
+import { Observable } from 'rxjs';
 
 @Component({
     selector: 'app-portfolio',
@@ -11,4 +13,11 @@ import { CommonModule } from '@angular/common';
 export class PortfolioComponent {
     readonly heading = 'Portfolio';
     readonly description = 'A simple portfolio route and component.';
+    users$!: Observable<User[]>;
+    constructor(private userService: UserService) { }
+
+
+    ngOnInit(): void {
+        this.users$ = this.userService.getUsers();
+    }
 }
